@@ -11,3 +11,7 @@
     color: gray;
     cursor: pointer;
 }
+.sidebarChannel__hash{
+    font-size: 30px;
+    padding: 8px;
+}
