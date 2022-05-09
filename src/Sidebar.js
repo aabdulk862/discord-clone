@@ -51,7 +51,7 @@ function Sidebar() {
       </div>
 
         <div className="sidebar__profile">
-            <Avatar/>
+            <Avatar src="https://randomuser.me/api/portraits/men/52.jpg"/>
             <div className="sidebar__profileInfo">
                 <h3>Adam A</h3>
                 <p>#thisIsMyID</p>
