@@ -51,6 +51,9 @@
     padding: 10px;
     border-top: 1px solid gray;
 }
+.avatar{
+    cursor: pointer;
+}
 
 .sidebar__voiceInfo,
 .sidebar__profileInfo{
@@ -80,4 +83,5 @@
 
 .sidebar__profileIcons > .MuiSvgIcon-root{
     padding: 10px;
+    cursor: pointer;
 }
