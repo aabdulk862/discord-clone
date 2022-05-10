@@ -5,6 +5,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import GifIcon from '@mui/icons-material/Gif';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import Message from './Message';
 
 function Chat() {
   return (
@@ -12,7 +13,9 @@ function Chat() {
         <ChatHeader/>
 
         <div className="chat__messages">
-
+            <Message/>
+            <Message/>
+            <Message/>
         </div>
         <div className="chat__input">
             <AddCircleIcon fontSize='large'/>

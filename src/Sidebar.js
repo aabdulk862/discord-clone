@@ -14,7 +14,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <h3>Aabdulk862</h3>
+        <h3>adam1862</h3>
         <ExpandMoreIcon />
       </div>
 
