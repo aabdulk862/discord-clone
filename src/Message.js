@@ -5,7 +5,7 @@ import { Avatar } from "@mui/material";
 function Message() {
   return (
     <div className="message">
-      <Avatar src="https://randomuser.me/api/portraits/men/50.jpg"/>
+      <Avatar src=""/>
       <div className="message__info">
         <h4>
           adam1862
