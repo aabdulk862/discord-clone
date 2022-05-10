@@ -50,6 +50,7 @@ function Chat() {
             message={message.message}
             user={message.user}
             timestamp={message.timestamp}
+            key ={message.timestamp}
           />
         ))}
       </div>
@@ -60,7 +61,10 @@ function Chat() {
             value={input}
             disabled={!channelId}
             onChange={(e) => setInput(e.target.value)}
-            placeholder={`Message ${channelName}`}
+            placeholder={channelName
+              ? `Message #${channelName}`
+              : 'Please select a channel to send a message'}
+            type="text"
           />
           <button
             disabled={!channelId}
