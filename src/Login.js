@@ -8,7 +8,7 @@ function Login() {
   return (
     <div className='login'>
         <div className="login__logo">
-            <img src="https://cdn.arstechnica.net/wp-content/uploads/2017/08/Discord-LogoWordmark-Color.png" alt="Logo" />
+            <img src="https://logos-download.com/wp-content/uploads/2021/01/Discord_Logo-1.png" alt="Logo" />
         </div>
         <Button onclick={signIn}>Sign In</Button>
     </div>
