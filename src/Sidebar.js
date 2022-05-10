@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Sidebar.css";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
@@ -12,9 +12,22 @@ import { Avatar } from '@mui/material';
 import SidebarChanel from "./SidebarChanel";
 import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
-import { auth } from "./firebase";
+import db, { auth } from "./firebase";
 function Sidebar() {
-  const user = useSelector(selectUser)
+  const user = useSelector(selectUser);
+  const [channels , setChannels] = useState([]);
+
+  useEffect(() => {
+    return () => {
+      db.collection('channels').onSnapshot(snapshot => (
+        setChannels(snapshot.docs.map(doc=>({
+          id: doc.id,
+          channel: doc.data(),
+        })))
+      ))
+    };
+  }, []);
+
   return (
     <div className="sidebar">
       <div className="sidebar__top">
@@ -32,10 +45,9 @@ function Sidebar() {
         </div>
 
         <div className="sidebar__channelsList">
-          <SidebarChanel />
-          <SidebarChanel />
-          <SidebarChanel />
-          <SidebarChanel />
+          {channels.map((channel)=>(
+            <SidebarChanel />
+          ))}
         </div>
       </div>
 
